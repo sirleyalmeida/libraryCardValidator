@@ -7,6 +7,13 @@ describe('Card validator', () => {
 		it('input is empty', () => {
 			expect(cardValidatorTest.cardValidator('')).to.be.false;
 		});
+		it('input is less than to sixteen digits', () => {
+			expect(cardValidatorTest.cardValidator('12345678910')).to.be.false;
+		});
+
+	});
+});
+
 		// it('input is bigger than eleven numbers', () => {
 		// 	expect(cpfValidatorTest.cpfValidator('123456789101')).to.be.false;
 		// });
@@ -28,5 +35,3 @@ describe('Card validator', () => {
 		// it('input is a valid cpf', () => {
 		// 	expect(cpfValidatorTest.cpfValidator('12345678909')).to.be.true;
 		// });
-	});
-});
