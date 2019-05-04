@@ -1,7 +1,7 @@
 /* eslint-disable */
-let chai = require('chai');
-let expect = chai.expect;
-let cardValidatorTest = require('../index');
+const chai = require('chai');
+const expect = chai.expect;
+const cardValidatorTest = require('../index');
 
 describe('Card validator', () => {
 	describe('validate input', () => {
