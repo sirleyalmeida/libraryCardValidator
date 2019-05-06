@@ -12,7 +12,7 @@ $  npm install librarycardvalidator
 
 ```javascript
 > const cpfValidator = require('librarycardvalidator');
-> console.log(cardValidator('númeroDoCartão'));
+> console.log(cardValidator('5367151096056004'));
 > // returns 'true'
 ```
 
