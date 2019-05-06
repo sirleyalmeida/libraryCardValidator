@@ -1,6 +1,6 @@
 {
   "name": "librarycardvalidator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Biblioteca para validação de número de cartão de crédito",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,9 @@
   },
   "author": "Sirley Almeida",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "librarycpfvalidator": "^1.0.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sirleyalmeida/libraryCardValidator"
