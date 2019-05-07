@@ -1,6 +1,6 @@
 {
   "name": "librarycardvalidator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Biblioteca para validação de número de cartão de crédito",
   "main": "index.js",
   "scripts": {

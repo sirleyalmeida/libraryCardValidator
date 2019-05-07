@@ -1,4 +1,4 @@
-const treatingNumbersCard = (numbersCard) => String(numbersCard).replace(/\ |\-|\.|\/|\(|\)| \D+/g, '');
+const treatingNumbersCard = (numbersCard) => String(numbersCard).replace(/[^\d]+/g, '');
 const isRepeatingNumbers = (numbersCard) => treatingNumbersCard(numbersCard).split('').every((elem) => elem === treatingNumbersCard(numbersCard)[0]);
 
 const numbersDifferents = (numbersCard) => {
@@ -10,17 +10,13 @@ const algorithmLuhn = (numbersCard) => {
   const mapNumbersCard = numbersCardArray(numbersCard)
     .reverse(numbersCard)
     .map((e) => parseInt(e))
-    .map((elem, index) => index % 2 ? elem * 2 : elem);
-
-  const treatingNumbersIsBiggerNine = mapNumbersCard.map((elem) => elem > 9 ? (elem % 10) + 1 : elem);
-
-  const sum = treatingNumbersIsBiggerNine
+    .map((elem, index) => index % 2 ? elem * 2 : elem)
+    .map((elem) => elem > 9 ? (elem % 10) + 1 : elem)
     .slice(1)
     .reduce((a, b) => a + b) % 10;
 
-  const rest = 10 - sum;
-
-  const lastNumber = mapNumbersCard.shift(numbersCard);
+  const rest = 10 - mapNumbersCard;
+  const lastNumber = parseInt(numbersCardArray(numbersCard).pop());
 
   return (rest === lastNumber) ? true : false;
 };

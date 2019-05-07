@@ -11,9 +11,13 @@ $  npm install librarycardvalidator
 ## Como utilizar:
 
 ```javascript
-> const cardValidator = require('librarycardvalidator');
-> console.log(cardValidator('5367151096056004'));
-> // returns 'true'
+const cardValidator = require('librarycardvalidator');
+cardValidator('5367151096056004');
+// returns 'true'
+
+const cardValidator = require('librarycardvalidator');
+cardValidator('1234567891022');
+// returns 'false'
 ```
 
 ## roadmap oficial do projeto*
